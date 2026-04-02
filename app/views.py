@@ -116,3 +116,37 @@ def project4(request):
             'pdf':'Link to PDF article',   
         }
     )
+
+def project5(request):
+    """Renders the about page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/Analysis.html',
+        {
+            'title':'Analysis file',
+            'message':'Your application description page.',
+            'year':datetime.now().year,
+            'intro':'Introduction',
+            'graphs':'Graphs',
+            'context':'Context',
+            'pdf':'Link to PDF article',   
+        }
+    )
+
+def project6(request):
+    """Renders the about page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/Analysis_Pros_cons.html',
+        {
+            'title':'Pros_cons',
+            'message':'Your application description page.',
+            'year':datetime.now().year,
+            'intro':'Introduction',
+            'graphs':'Graphs',
+            'context':'Context',
+            'pdf':'Link to PDF article',   
+        }
+    )

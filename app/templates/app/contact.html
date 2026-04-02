@@ -1,19 +1,23 @@
 {% extends "app/layout.html" %}
-
+{% load static %}
 {% block content %}
 
 <h2>{{ title }}</h2>
 <h3>{{ message }}</h3>
 
 <address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
+
     <abbr title="Phone">P:</abbr>
-    425.555.0100
+
 </address>
 
+<body>
+    <p>BLA, BLA</p>
+</body>
+
 <address>
-    <strong>Content</strong> <a href="mailto:M.P.Jansen@uva.nl">M.P.Jansen@uva.nl</a><br />
+    <strong>Content: </strong> <a href="mailto:M.P.Jansen@uva.nl">M.P.Jansen@uva.nl</a><br />
+    <strong>Analysis file and Pros_cons by:</strong> <a>I. Stortenbeker</a><br />
     <strong>Technical Support:</strong> <a href="mailto:Thijs.Hermsen@ru.nl">Thijs.Hermsen@ru.nl</a>
 </address>
 
