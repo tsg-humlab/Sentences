@@ -33,7 +33,7 @@ main,
 nav,
 section,
 summary {
-  display: block;
+    display: block;
 }
 
 audio,
@@ -311,11 +311,13 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.428571429;
-  color: #333333;
-  background-color: #ffffff;
+    /* This is a single-line comment */
+    /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    font-family: 'Open Sans';
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #333333;
+    background-color: #ffffff;
 }
 
 input,
@@ -473,9 +475,9 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 500;
-  line-height: 1.1;
+    color: #730E04;
+    font-weight: 900;
+    line-height: 1.1;
 }
 
 h1 small,
@@ -500,6 +502,7 @@ h2,
 h3 {
   margin-top: 20px;
   margin-bottom: 10px;
+
 }
 
 h4,
@@ -511,7 +514,9 @@ h6 {
 
 h1,
 .h1 {
-  font-size: 36px;
+    font-size: 36px;
+    color: red;
+    font-weight: 800 ;    
 }
 
 h2,
@@ -537,6 +542,7 @@ h5,
 h6,
 .h6 {
   font-size: 12px;
+  font-weight: 800;
 }
 
 h1 small,
@@ -1669,7 +1675,7 @@ input[type="checkbox"] {
   margin-top: 1px \9;
   /* IE8-9 */
 
-  line-height: normal;
+    line-height: normal;
 }
 
 input[type="file"] {
@@ -2091,8 +2097,8 @@ fieldset[disabled] .btn-default.active {
 
 .btn-primary {
   color: #ffffff;
-  background-color: #428bca;
-  border-color: #357ebd;
+  background-color: #e3000b;
+  border-color: #e3000b ;
 }
 
 .btn-primary:hover,
@@ -2101,8 +2107,8 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
   color: #ffffff;
-  background-color: #3276b1;
-  border-color: #285e8e;
+  background-color: #4a0004;
+  border-color: #4a0004;
 }
 
 .btn-primary:active,
@@ -3819,6 +3825,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
   position: relative;
   display: block;
   padding: 10px 15px;
+  font-weight: 800;
+  
 }
 
 .nav > li > a:hover,
@@ -4194,8 +4202,9 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-brand {
   float: left;
   padding: 15px 15px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 20px;
+  font-weight: 800;
 }
 
 .navbar-brand:hover,
@@ -4501,12 +4510,12 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse {
-  background-color: #222222;
-  border-color: #080808;
+    background-color: #e3000b;
+    border-color: #e3000b;
 }
 
 .navbar-inverse .navbar-brand {
-  color: #999999;
+  color: #ffffff;
 }
 
 .navbar-inverse .navbar-brand:hover,
@@ -4520,12 +4529,12 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse .navbar-nav > li > a {
-  color: #999999;
+  color: #ffffff;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
-  color: #ffffff;
+  color: #4a0004;
   background-color: transparent;
 }
 
@@ -4939,7 +4948,8 @@ a.list-group-item.active > .badge,
 
 .jumbotron h1 {
   line-height: 1;
-  color: inherit;
+  color: #e3000b;
+
 }
 
 .jumbotron p {
@@ -4961,6 +4971,7 @@ a.list-group-item.active > .badge,
   }
   .jumbotron h1 {
     font-size: 63px;
+    font-weight: 900;
   }
 }
 

@@ -1,10 +1,23 @@
 {% extends "app/layout.html" %}
 
+{% load static %}
 {% block content %}
+<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+ 
 
 <h2>{{ title }}.</h2>
 <h3>{{ message }}</h3>
 
 <p>Use this area to provide additional information.</p>
+
+
+<div class="col-sm-12 display-lg">
+    <!-- Image -->
+    <a href="https://https://www.ru.nl/centre-for-language-studies" target="_blank" style="margin: 10px;">
+        <img src="/static/app/content/RU_logo_NL.png" style='max-width: 500px; width: auto; height: auto;' title="Radboud Universiteit" />
+    </a>
+</div>
+
+
 
 {% endblock %}
