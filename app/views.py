@@ -82,42 +82,42 @@ def project2(request):
     )
 
 
+# def project3(request):
+#     """Renders the about page."""
+#     assert isinstance(request, HttpRequest)
+#     return render(
+#         request,
+#         'app/project3.html',
+#         {
+#             'title':'Viva forum',
+#             'message':'Your application description page.',
+#             'year':datetime.now().year,
+#             'intro':'Introduction',
+#             'graphs':'Graphs',
+#             'context':'Context',
+#             'pdf':'Link to PDF article',        
+
+#         }
+#     )
+
+# def project4(request):
+#     """Renders the about page."""
+#     assert isinstance(request, HttpRequest)
+#     return render(
+#         request,
+#         'app/project4.html',
+#         {
+#             'title':'Agent based modelling',
+#             'message':'Your application description page.',
+#             'year':datetime.now().year,
+#             'intro':'Introduction',
+#             'graphs':'Graphs',
+#             'context':'Context',
+#             'pdf':'Link to PDF article',   
+#         }
+#     )
+
 def project3(request):
-    """Renders the about page."""
-    assert isinstance(request, HttpRequest)
-    return render(
-        request,
-        'app/project3.html',
-        {
-            'title':'Viva forum',
-            'message':'Your application description page.',
-            'year':datetime.now().year,
-            'intro':'Introduction',
-            'graphs':'Graphs',
-            'context':'Context',
-            'pdf':'Link to PDF article',        
-
-        }
-    )
-
-def project4(request):
-    """Renders the about page."""
-    assert isinstance(request, HttpRequest)
-    return render(
-        request,
-        'app/project4.html',
-        {
-            'title':'Agent based modelling',
-            'message':'Your application description page.',
-            'year':datetime.now().year,
-            'intro':'Introduction',
-            'graphs':'Graphs',
-            'context':'Context',
-            'pdf':'Link to PDF article',   
-        }
-    )
-
-def project5(request):
     """Renders the about page."""
     assert isinstance(request, HttpRequest)
     return render(
@@ -134,7 +134,7 @@ def project5(request):
         }
     )
 
-def project6(request):
+def project4(request):
     """Renders the about page."""
     assert isinstance(request, HttpRequest)
     return render(
