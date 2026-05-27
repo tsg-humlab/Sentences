@@ -49,19 +49,36 @@ def project1(request):
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'app/project1.html',
+        'app/Analysis.html',
         {
-            'title':'Nieuws data',
+            'title':'Analysis file',
             'message':'Your application description page.',
             'year':datetime.now().year,
             'intro':'Introduction',
             'graphs':'Graphs',
             'context':'Context',
-            'pdf':'Link to PDF article',        
-
-
+            'pdf':'Link to PDF article',   
         }
     )
+
+#def project1(request):
+#    """Renders the about page."""
+#    assert isinstance(request, HttpRequest)
+#    return render(
+#         request,
+#         'app/project1.html',
+#         {
+#             'title':'Nieuws data',
+#             'message':'Your application description page.',
+#             'year':datetime.now().year,
+#             'intro':'Introduction',
+#             'graphs':'Graphs',
+#             'context':'Context',
+#             'pdf':'Link to PDF article',        
+
+
+#         }
+#     )
 
 def project2(request):
     """Renders the about page."""
