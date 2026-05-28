@@ -44,7 +44,7 @@ def about(request):
         }
     )
 
-def project1(request):
+def project1a(request):
     """Renders the about page."""
     assert isinstance(request, HttpRequest)
     return render(
@@ -60,6 +60,24 @@ def project1(request):
             'pdf':'Link to PDF article',   
         }
     )
+
+def project1b(request):
+    """Renders the about page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/Analysis_Pros_cons.html',
+        {
+            'title':'Pros_cons',
+            'message':'Your application description page.',
+            'year':datetime.now().year,
+            'intro':'Introduction',
+            'graphs':'Graphs',
+            'context':'Context',
+            'pdf':'Link to PDF article',   
+        }
+    )
+
 
 #def project1(request):
 #    """Renders the about page."""
@@ -139,10 +157,10 @@ def project3(request):
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'app/Analysis.html',
+        'app/project3.html',
         {
-            'title':'Analysis file',
-            'message':'Your application description page.',
+            'title':'Social Media',
+            'message':'',
             'year':datetime.now().year,
             'intro':'Introduction',
             'graphs':'Graphs',
@@ -156,10 +174,10 @@ def project4(request):
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'app/Analysis_Pros_cons.html',
+        'app/project4.html',
         {
-            'title':'Pros_cons',
-            'message':'Your application description page.',
+            'title':'Agent-Based Modeling',
+            'message':'',
             'year':datetime.now().year,
             'intro':'Introduction',
             'graphs':'Graphs',
