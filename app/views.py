@@ -66,7 +66,7 @@ def project1b(request):
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'app/Analysis_Pros_cons.html',
+        'app/Analysis_comb.html',
         {
             'title':'Pros_cons',
             'message':'Your application description page.',
@@ -105,7 +105,7 @@ def project2(request):
         request,
         'app/project2.html',
         {
-            'title':'Twitter',
+            'title':'What 55,000 tweets tell us about how the Dutch talk about cancer screening',
             'message':'Your application description page.',
             'year':datetime.now().year,
             'intro':'Introduction',
@@ -159,7 +159,7 @@ def project3(request):
         request,
         'app/project3.html',
         {
-            'title':'Social Media',
+            'title':'What people really say about cancer screening online: a look inside a Dutch discussion forum',
             'message':'',
             'year':datetime.now().year,
             'intro':'Introduction',
@@ -176,7 +176,7 @@ def project4(request):
         request,
         'app/project4.html',
         {
-            'title':'Agent-Based Modeling',
+            'title':'Cancer screening in the Dutch news: a "necessary evil" that!s worth it',
             'message':'',
             'year':datetime.now().year,
             'intro':'Introduction',

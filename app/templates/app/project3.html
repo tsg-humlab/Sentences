@@ -1,18 +1,166 @@
 {% extends "app/layout.html" %}
-% load static %}
+{% load static %}
 {% block content %}
 <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
 
-<h2>{{ title }}</h2>
-<h3>{{ message }}</h3>
-<h3>{{ intro }}</h3>
-<h3>{{ graphs }}</h3>
-<h3>{{ context }}</h3>
-<h3>{{ pdf }}</h3>
-<h3>{{ intro }}</h3>
+<div class="row">
+    <div class="col-md-8">
+        <h1>{{ title }}</h1>
+        <p>
+            Cancer screening programs work. Regular checks for breast, cervical, and colorectal cancer catch disease earlier,
+            when treatment is more likely to succeed. Yet fewer people are showing up for them.
+            Participation is dropping across the world, and in the Netherlands cervical screening uptake sits at around 46%,
+            well below the 70% the World Health Organization says a program needs to make a real dent in cancer deaths.
+        </p>
+        <br />
+        <p>
+            So where do people go to make sense of an invitation letter for a smear test or a stool sample kit?
+            Increasingly, online. We wanted to know what actually happens when people discuss cancer screening on the internet,
+            not in theory but in practice, so we looked at fifteen years of conversation on one of the Netherlands' largest discussion forums.
+        </p>
+
+        <h3>Why a forum, and not social media</h3>
+        <p>
+            Most research on health misinformation looks at Twitter/X, Facebook, or Instagram.
+            For this specific study, we chose something different: the Viva-forum,
+            a Dutch forum that started life attached to a women's magazine,
+            kept running by its users even after the magazine folded in 2021,
+            and today still has close to 165,000 active members, most of them women between 18 and 70.
+            That's roughly the age range targeted by Dutch breast and cervical screening programs, which made the forum a natural place to look.
+        </p>
+        <p>
+            Forums differ from social media in a way that matters here. They're organized into sections on specific topics,
+            so people end up talking to others who share a concern rather than broadcasting to an open feed.
+            Earlier research on stigmatized topics like postnatal depression has found that this setup makes people
+            feel more understood by the people they're talking to. We wanted to know whether the same held for cancer screening, and what role misinformation played when it did.
+        </p>
+        <p>
+            We pulled threads from the forum's health section going back to 2010,
+            searched for terms tied to Dutch screening programs, and worked through them by hand.
+            After filtering out threads that used screening-related words but weren't actually about the national programs,
+            we ended up with 361 threads to analyze in depth, using a mix of themes drawn from prior research and themes that emerged from the data itself.
+        </p>
+
+        <h3>People use the forum to hold each other up</h3>
+        <p>
+            The clearest pattern in the data was that users were, above almost everything else,
+            supporting one another. We grouped what we saw into five recurring patterns:
+            people told their own stories, offered practical information drawn from their own experience,
+            gave each other emotional support, asked questions, and pointed each other to outside sources.
+        </p>
+        <p>
+            Storytelling was everywhere. Someone would describe finding out they had an early-stage cervical abnormality after a routine test,
+            or the anxious wait for results that came back unclear. These weren't clinical case reports.
+            They came with feeling attached, and people were open about being scared, relieved, or blindsided.
+        </p>
+        <p>
+            Practical, experience-based advice followed close behind.
+            Someone who'd been through a colposcopy would walk a nervous first-timer through what to expect.
+            This wasn't always glowing. Plenty of people voiced frustration, sometimes sharply, about specific aspects of the programs:
+            why a follow-up procedure hurt more than expected, why men don't get invited for regular prostate checks the way women get invited for cervical checks,
+            why screening only happens every five years instead of more often. What stood out is that this frustration was rarely aimed at the idea of screening itself.
+            People wanted the programs to work better, not to go away.
+        </p>
+        <p>
+            And then there was plain reassurance. Somebody anxious about an upcoming test would get a reply along the lines of: it's over quickly,
+            it's not as bad as you're picturing, you'll be fine. Small, but this kind of exchange is exactly what forums seem to be built for,
+            and it lines up with older research showing that online support groups help people cope with a diagnosis or a scare.
+        </p>
+
+        <h3>Misinformation exists, but it's smaller and messier than expected</h3>
+        <p>
+            Given how much attention health misinformation gets, we expected to find plenty of it.
+            We did find some. Out of 361 threads, 155 posts were flagged as potentially containing false claims.
+            We brought in a medical doctor to help assess these,
+            since judging medical accuracy isn't something you can do from a communication background alone.
+            Of those 155, 55 turned out to actually contain incorrect information.
+        </p>
+        <p>
+            That's a smaller share than studies of cancer content on Twitter/X have reported,
+            where researchers have found misinformation in roughly 4 in 10 of the most-liked cancer posts.
+            Part of the difference may be the format. A forum thread invites back-and-forth, not a one-off post competing for likes.
+        </p>
+        <p>
+            What surprised us more was the shape the misinformation took. We'd expected mostly outright false claims,
+            and about half of the flagged posts were that: for instance,
+            a claim that women who've had breast augmentation are disproportionately dying of breast cancer,
+            which isn't supported by evidence. But the other half was murkier.
+            Some posts weren't wrong so much as missing nuance, or slightly off on a number,
+            like citing 80% when the correct figure was closer to 85%. Others were personal guesses stated a little too confidently,
+            with hedges attached, such as someone unsure whether breast implants complicate mammograms and saying so.
+            And some posts revealed a simple mix-up between correlation and causation,
+            like a comment linking height to cancer risk that reflects a real, if still not fully understood,
+            statistical association, garbled into something closer to a mechanism.
+        </p>
+        <p>
+            This matters for how we think about the problem.
+            If someone mixes a correlation with a cause, or misremembers a percentage,
+            that's a different issue than someone deliberately spreading a falsehood.
+            The people posting these things weren't necessarily trying to mislead anyone.
+            Much of what we found looked less like intentional deception and more like people
+            doing their best to recall details that experts spend careers getting precisely right,
+            and getting the gist rather than the specifics, a pattern that researchers who study memory
+            and health decisions have described as "gist-based" thinking, where people hold onto meaning while details drift.
+        </p>
+        <p>
+            We also found some claims that go further, closer to what shows up in wider health misinformation research:
+            that mammograms themselves raise breast cancer risk through radiation exposure,
+            that green tea can help prevent HPV, or that thermography (a heat-based imaging technique)
+            works just as well as mammography and is more comfortable, so it should replace it.
+            It doesn't; there's no good evidence it detects early-stage breast cancer as reliably.
+            These sit closer to genuine misconceptions circulating more broadly online than to a simple memory slip.
+        </p>
+
+        <h3>The forum corrects itself, some of the time</h3>
+        <p>
+            Here's a finding we think matters most for anyone worried about online health misinformation:
+            roughly four in ten misinformation posts we found were followed by a correction, written by another forum member, in the same thread.
+        </p>
+        <p>
+            The corrections came in different forms. Sometimes blunt:
+            a user repeating the original claim word for word with "not" inserted or simply replying that what someone said wasn't true.
+            Other times, someone would add the missing context. In one thread about HPV,
+            after a post suggesting the virus is something you're just born carrying,
+            another user stepped in to explain that HPV is sexually transmitted,
+            that most people are exposed to it at some point, and that the immune system usually clears it on its own.
+        </p>
+        <p>
+            This kind of peer correction isn't hypothetical elsewhere either.
+            Research on other platforms has shown that corrections from ordinary users,
+            not just experts, can reduce misperceptions, partly because peer corrections
+            don't carry the same defensiveness that a claim from an "official" source sometimes triggers.
+            What we can now say is that this happens on a Dutch health forum too, without any intervention.
+        </p>
+
+        <h3>What this means going forward</h3>
+        <p>
+            None of this suggests forums are a substitute for a doctor's advice,
+            and we didn't test whether reading these corrections actually changed anyone's mind.
+            But we think the practical takeaway is that health communicators and screening organizations
+            are underusing a resource that's already active and, to a real extent, self-correcting.
+            Forums tend to get less monitoring attention than social media, but the conversations
+            happening on them can reveal exactly which concerns and misconceptions are circulating
+            among the people a screening program is trying to reach. We also saw healthcare
+            professionals posting on the forum in their own voice,
+            using their expertise to help other users directly, something we'd encourage more of.
+        </p>
+        <p>
+            There are limits to what we can conclude. We don't know what motivated any individual post;
+            someone who is confidently wrong about a health fact could believe what they're saying,
+            or could be posting in bad faith, and our data can't tell the two apart.
+            We also relied on keyword searches to find relevant threads, so conversations that discussed
+            screening without using our search terms would have been missed. Interviews with forum users,
+            or newer computational methods that could scan a whole forum rather than a keyword-defined slice of it, would be a natural next step.
+        </p>
+        <p>
+            What we can say with more confidence is this: on this forum, over more than a decade,
+            people mostly used cancer screening discussions to support each other,
+            share what they'd learned from experience, and occasionally, when someone got something wrong, put it right themselves.
+        </p>
 
 
 
-
+    </div>
+</div>
 
 {% endblock %}

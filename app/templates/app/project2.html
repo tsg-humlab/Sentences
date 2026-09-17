@@ -3,96 +3,197 @@
 {% block content %}
 <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
 
-<h2>{{ title }}</h2>
-<h3>{{ message }}</h3>
-<h3>{{ intro }}</h3>
-<h3>{{ graphs }}</h3>
-<h3>{{ context }}</h3>
-<h3>{{ pdf }}</h3>
+    <div class="row">
+        <div class="col-md-8">
+            <h1>{{ title }}</h1>
+            <br />
+            <p>
+                Cancer screening catches disease early, when it's easier to treat, and yet fewer people are showing up for it.
+                In the Netherlands, cervical screening uptake sits well below the 70% threshold the World Health Organization says a
+                program needs to actually reduce cancer deaths at a population level. People increasingly turn to the internet,
+                including social media, to help decide whether to take part. So we asked a straightforward question:
+                what does that conversation actually look like on Twitter/X?
+            </p>
+            <p>
+                We pulled every Dutch-language tweet mentioning cancer screening between 2011 and March 2023 from an archive of 5.9 billion tweets,
+                55,403 of them in total, posted by 22,493 users. We wanted to know three things: how much people were tweeting about screening and when,
+                what they linked to, and how much of what they said was actually wrong.
+            </p>
 
-<div class="row">
-    <div class="col-md-3">
-        <body>
-            <img src="{% static 'app/content/graph1.jpg' %}" style='max-width:200px; width: auto; height: auto;' />
-        </body>
-        <p>You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.</p>
+            <h3>How much people tweet, and when</h3>
+
+            <p>
+                Tweets about screening weren't spread evenly across the twelve years or the four programs we tracked (general population screening,
+                and the specific breast, cervical, and colorectal programs). Most tweets, nearly two-thirds of the corpus,
+                talked about screening in general rather than any one program.
+            </p>
+
+            <br />
+
+            <body>
+                <img src="{% static 'app/content/social_media/Fig1.jpg' %}" style='max-width:750px; width: auto; height: auto;' />
+            </body>
+
+            <ss>[Figure 1: volume of tweets and retweets over time, 2011–2023]</ss>
+
+            <br />
+            <br />
+
+            <p>
+                A third of the tweets, 32%, were retweets rather than original posts, and another 19% were replies to someone else.
+                That mix of original posts, replies, and retweets suggests screening wasn't just
+                something people posted about in isolation; it was something they talked back and forth about.
+            </p>
+
+            <p>
+                Two moments stand out. The first is 2014, when the colorectal screening program launched in the Netherlands;
+                tweet volume about colorectal screening, and about screening in general, spiked well above what we'd expect from an ordinary year.
+                The second is 2021, tied to two things happening close together: the pandemic-era pause of the national screening programs,
+                and the rollout of a home test kit for cervical screening. Tweets about cervical screening rose noticeably that year.
+                Both moments point to the same pattern: people tweet about screening when something changes in the real world, not at a steady background rate.
+            </p>
+
+            <br />
+
+            <body>
+                <img src="{% static 'app/content/social_media/Fig2.jpg' %}" style='max-width:750px; width: auto; height: auto;' />
+            </body>
+
+            <ss>
+                [Figure 2: tweets per cancer screening program per year, annotated with real-world events]
+            </ss>
+
+            <br />
+            <br />
+
+            <p>
+                We also looked at hashtags. About a third of tweets used at least one.
+                The tags people reached for mostly named the thing being discussed, "breastcancer," "populationscreening," "colorectal cancer,"
+                rather than anything more editorial. That held up when we broke hashtags down by program.
+            </p>
+
+            <br />
+
+            <body>
+                <img src="{% static 'app/content/social_media/Tab1.jpg' %}" style='max-width:750px; width: auto; height: auto;' />
+            </body>
+
+            <ss>
+                [Table 1: top 10 hashtags per cancer screening program]
+            </ss>
+
+            <br />
+            <br />
+
+            <h3>
+                What people link to
+            </h3>
+
+            <p>
+                Just under half of all tweets carried a link, and here's the finding we didn't expect:
+                the single most common thing people linked to was another tweet. Actual news sites came next,
+                led by a major Dutch publisher, then the national broadcaster NOS, a Dutch news aggregator,
+                and the website of the Dutch Journal of Healthcare (Nederlands Tijdschrift voor Geneeskunde).
+                The website of the RIVM, the government body that runs the Dutch screening programs, showed up too,
+                but far down the list: tenth place, cited in only 343 of 23,579 linked tweets.
+            </p>
+
+            <br />
+
+            <body>
+                <img src="{% static 'app/content/social_media/Fig3.jpg' %}" style='max-width:750px; width: auto; height: auto;' />
+            </body>
+
+            <ss>
+                [Figure 3: shared sources over time]
+            </ss>
+
+            <br />
+            <br />
+
+            <p>
+                One particular spike is worth mentioning on its own. In 2015, links to the Dutch Journal of Healthcare's website surged,
+                driven by tweets debating a research paper on colorectal screening, a rebuttal to it,
+                and a follow-up interview the journal ran on the benefits and risks of the program.
+                That single back-and-forth generated more retweets than almost anything else in that category,
+                which tells us something about how a single piece of published research can seed weeks of public debate on the platform.
+            </p>
+            <p>
+                So contrary to a common worry, that social media crowds out official, evidence-based sources with grassroots or unreliable ones,
+                we didn't find alternative-medicine or fringe websites among the most-shared links.
+                The caution is that we couldn't see inside the tweets people linked to,
+                since our dataset didn't include the content of those linked posts, so misinformation could still be circulating one layer deeper than we could measure.
+            </p>
+            <h3>How much misinformation, and what kind</h3>
+
+            <p>
+                This is the part most people ask about first, so here are the numbers straight.
+                We manually checked a representative sample of 1,200 tweets, weighted to match the full dataset by year and program.
+                Of those, 924 were actually about the Dutch screening programs,
+                and 679 of those shared some kind of factual claim rather than just a personal story or opinion.
+                Out of that group, 23 tweets, about 3.4%, contained a claim we classified as misinformation.
+            </p>
+            <p>
+                That's a much lower rate than has been reported for cancer content on social media elsewhere;
+                one earlier study found misinformation in 44% of the most-liked cancer-related posts on social media.
+                It's worth being precise about what we did and didn't count as misinformation here.
+                There's genuine, ongoing scientific disagreement about breast cancer screening specifically,
+                about overdiagnosis, about how large the mortality benefit really is, about whether the costs are worth it.
+                We didn't count someone repeating that debate as misinformation.
+                What we did count were claims stated as settled fact with no evidence behind them:
+                that screening flatly doesn't save lives, that pausing the program during COVID-19 caused large numbers of deaths,
+                that more mammograms directly cause more cancer or more amputations.
+            </p>
+            <p>
+                The 23 misinformation tweets split fairly evenly across programs: eight about general population screening,
+                eight about breast screening, four about cervical screening, three about colorectal screening.
+                The flavor of the claims differed by program. General and breast screening misinformation
+                leaned toward flat assertions of ineffectiveness and vague suspicion of pharmaceutical industry motives.
+                Cervical screening misinformation involved distrust of the HPV vaccine, plus one case that ran the other way:
+                a tweet overstating how much more frequent screening reduces deaths, which is misinformation in favor of
+                screening rather than against it. Colorectal screening misinformation centered on claimed harms from the procedure itself, again without evidence.
+            </p>
+            <p>
+                Across all of these, the tone mattered as much as the content.
+                Most misinformation tweets used rhetorical questions, sarcasm, open anger,
+                or fear-based language, rather than a neutral statement of a wrong fact.
+            </p>
+            <p>
+                We want to be careful not to overstate what a 3.4% rate means.
+                The sample of misinformation tweets is small, 23 tweets, so we can't draw firm conclusions
+                about differences between programs or trends over time.
+                And we'd echo a point that's easy to lose in a headline statistic:
+                a low rate doesn't mean the risk is low. Prior research has found that tweets built
+                around misinformation tend to use more emotionally engaging language and more personal
+                pronouns than accurate tweets do, which means a small number of misleading posts can travel
+                further than their raw count suggests. Rare doesn't mean harmless.
+            </p>
+
+            <h3>What this adds up to</h3>
+            <p>
+                Put together, these three findings show a fairly specific picture of Twitter/X as a space for talking about cancer screening.
+                Conversation clusters around real events, program launches, pandemic disruptions, new tools like the home test kit,
+                rather than running at a constant hum. When people share sources, official government information barely registers
+                next to news coverage and, more than anything, other tweets.
+                And outright misinformation is present but rare, concentrated less in wholesale fabrication
+                and more in confident, evidence-free extensions of a real and ongoing scientific debate.
+            </p>
+            <p>
+                For anyone involved in public health communication, we think the practical read is this:
+                the moments when screening programs change, a pause, a new test, a policy shift,
+                are exactly when public attention spikes on social media, which makes them the highest-value windows
+                for putting accurate information directly into that conversation rather than after the fact.
+            </p>
+            <p>
+                It's also worth pointing out what this study doesn't show.
+                We looked at one platform over twelve years, and we can't say how representative
+                Dutch Twitter/X conversations are of what people actually think or do about screening more broadly,
+                plenty of relevant conversation happens on platforms we didn't touch, or off social media entirely.
+                What we can say is that within this dataset, the volume of talk tracked real-world screening
+                news closely enough that social media looks like a genuine, if partial,
+                window onto how a population responds when a screening program changes.
+            </p>
+
+        </div>
     </div>
-    <div class="col-md-1">
-        <h2></h2>
-        <p>
-
-        </p>
-    </div>
-    <div class="col-md-3">
-        <h3>Project 3</h3>
-        <body>
-            <img src="{% static 'app/content/graph1.jpg' %}" style='max-width:250px; width: auto; height: auto;' />
-        </body>
-        <br />
-        <p>You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.</p>
-        <br />
-        <p>
-            You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.
-            You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.
-            You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.
-            You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.
-        </p>
-    </div>
-    <div class="col-md-1">
-        <h2></h2>
-        <p>
-
-        </p>
-    </div>
-    <div class="col-md-3">
-        <h2>Project 3</h2>
-        <p>
-            You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.
-            You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.
-            You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.
-            You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.
-        </p>
-    </div>
-</div>
-
-    
-
-
-
-<div class="row">
-    <div class="col-md-4">
-        <body>
-            <img src="{% static 'app/content/graph1.jpg' %}" style='max-width:200px; width: auto; height: auto;' />
-        </body>
-        <p>You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.</p>
-    </div>
-
-    <div class="col-md-4">
-        <h2>Project 3</h2>
-        <p>
-            You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.
-            You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.
-            You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.
-            You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.
-        </p>
-        <body>
-            <img src="{% static 'app/content/graph1.jpg' %}" style='max-width:200px; width: auto; height: auto;' />
-        </body>
-        <p>You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.</p>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-md-4">
-        <h2>Project 3</h2>
-        <p>
-            You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.
-            You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.
-            You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.
-            You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.
-        </p>
-    </div>
-
-</div>
-
-{% endblock %}
+    {% endblock %}

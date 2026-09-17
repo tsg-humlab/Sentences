@@ -3,12 +3,166 @@
 {% block content %}
 <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
 
+<div class="row">
+    <div class="col-md-8">
 
-<h2>{{ title }}</h2>
-<h3>{{ message }}</h3>
-<h3>{{ intro }}</h3>
-<h3>{{ graphs }}</h3>
-<h3>{{ context }}</h3>
-<h3>{{ pdf }}</h3>
+        <h1>{{ title }}</h1>
+        <p>
+            Cancer screening saves lives, but only if enough people take part.
+            In the Netherlands, participation is well below the level needed for the breast, cervical,
+            and colorectal programs to have their full effect at a population level, and it's been slipping further.
+            People form opinions about whether to take part from many places: a doctor's advice,
+            a pamphlet from the national health institute, a conversation with someone who's been through it.
+            Newspapers are still one of them too, especially for older readers, who happen to be exactly the age group these programs invite.
+            Earlier research has shown that how a health topic gets framed in the news can shift how risky or beneficial people perceive it to be,
+            and that news coverage tends to track what people are already discussing on social media,
+            so newspapers are a useful place to investigate the wider public conversation.
+            So, we asked: what do Dutch newspapers actually say about cancer screening?
+        </p>
+        <p>
+            We searched Lexis Nexis for every Dutch newspaper article mentioning cancer screening from January 2010 through October 2022,
+            cleaned out duplicates (a lot of regional papers reprint the same story), and ended up with 5,503 unique articles.
+            From those, we hand-coded a systematic sample of 924, of which 675 turned out to be genuinely about screening rather than cancer in general.
+        </p>
+        <h3>What gets covered, and how much</h3>
+        <p>
+            Breast cancer dominates. News about breast cancer and breast screening ran at least twice the volume of any other cancer type in our sample,
+            even though breast cancer isn't actually the most common or most deadly cancer in the Netherlands.
+            That kind of overrepresentation shows up in cancer news coverage elsewhere too, so the Netherlands isn't an outlier here.
+        </p>
 
-{% endblock %}
+        <body>
+            <img src="{% static 'app/content/news_media/Fig1_NM.jpg' %}" style='max-width:750px; width: auto; height: auto;' />
+        </body>
+
+        <ss>
+            Figure 1. Volume of news about cancer screening (dark bars) and cancer (light bars)
+        </ss>
+
+
+        <br />
+        <br />
+
+        <p>
+            Cervical cancer news was less frequent overall, but a larger share of it specifically discussed the screening program itself,
+            while cervical screening has the lowest participation rate of the three programs,
+            and its potential participants report the most barriers to taking part. If newspapers are talking about that program specifically,
+            rather than cervical cancer, that may be where public attention is most useful.
+        </p>
+        <p>
+            Most articles ran as standard news items in regional papers, filed under health and healthcare.
+            We didn't find dramatic spikes in coverage overall, but individual cancer types did show clear peaks tied to specific events:
+            the announcement and later launch of the national colorectal screening program, the rollout of a home test kit for cervical screening,
+            a conflict-of-interest story involving a health council member. Interestingly,
+            the volume of screening news stayed essentially flat through the early part of the pandemic,
+            even though the screening programs themselves were paused, while breast cancer coverage actually went up during that period, potentially because the pause itself became the story.
+        </p>
+
+        <body>
+            <img src="{% static 'app/content/news_media/Fig2_NM.jpg' %}" style='max-width:750px; width: auto; height: auto;' />
+        </body>
+
+        <ss>
+            Figure 2. Cancer screening coverage over time for all news per quarter (3.1) -
+            differentiated between single articles and duplicates,
+            and the current screening program consisting of breast (3.2), cervical (3.3), and colon (3.4) cancer,
+            and early detection of lung (3.5) and prostate (3.6) cancer per month.
+            The absolute frequencies (bar graph) and rolling averages (line graphs) are shown.
+        </ss>
+
+        <br />
+        <br />
+
+
+        <h3>Effective, but not without complaints</h3>
+        <p>
+            The clearest overall finding is that newspapers are positive about whether screening works.
+            Close to 6 in 10 articles framed screening as effective, either explicitly ("the swab saved my life") or implicitly,
+            by assuming it works without needing to argue for it. About one in five articles raised some kind of doubt about effectiveness,
+            but reading through those, doubt was rarely the article's main point. Usually, a piece would mention a limitation, a chance of a false result,
+            say, and still conclude on the conclusion that screening is worthwhile.
+        </p>
+        <p>
+            But "effective" and "pleasant" turned out to be two different questions entirely.
+            When we pulled out every argument for and against screening mentioned in the articles,
+            just over a thousand of each, roughly matched, a pattern seemed to emerge.
+            Arguments about the core purpose of screening, catching cancer early, whether it's worth doing at all,
+            leaned heavily positive: about 73% of those arguments were pro-screening.
+            But arguments about the practical experience of going through it were a different story.
+            Complaints were present, mostly about how the programs are organized (cost, capacity, scheduling),
+            the physical experience (pain, radiation, discomfort), and the psychological side (fear, taboo, anxiety).
+        </p>
+
+        <body>
+            <img src="{% static 'app/content/news_media/Fig3_NM.jpg' %}" style='max-width:750px; width: auto; height: auto;' />
+        </body>
+
+        <ss>
+            Figure 3. Distribution (n and %) of the different argument types in favor or against cancer screening.
+            Percentages display the distribution of an argument type within all pros (n = 1,064) or cons (n = 1,079).
+        </ss>
+
+        <br />
+        <br />
+
+        <p>In sum: Dutch newspapers rarely question whether screening is a good idea. But they regularly acknowledge that going through it is unpleasant.</p>
+
+        <br />
+
+        <body>
+            <img src="{% static 'app/content/news_media/Tab1.jpg' %}" style='max-width:750px; width: auto; height: auto;' />
+        </body>
+        <br />
+        <br />
+        <ss>Table 1.Examples of pros and cons in news media for cancer screening.</ss>
+
+        <br />
+        <br />
+
+        <h3>Breast, cervical, and colorectal coverage don't read the same</h3>
+        <p>
+            The three main programs got noticeably different treatment. Breast cancer coverage leaned on physical-impact arguments, pain, radiation exposure during a mammogram, more than the other two. Cervical cancer coverage leaned on psychological and organizational arguments instead: the taboo of a smear test, low motivation, the introduction of the at-home kit. Colorectal cancer coverage didn't show a strong pattern either way, though there was a (non-significant) tendency for its effectiveness to be questioned somewhat more often than the others.
+        </p>
+        <h3>Who gets quoted matters</h3>
+        <p>
+            We also looked at who newspapers turned to as sources: healthcare professionals, scientists, health organizations, or people speaking from personal experience with screening. This turned out to shape the tone of the article. Articles that quoted people with personal experience were more likely to frame screening as effective, without much argument attached, and more likely to describe cancer's risks and consequences as serious. Articles that quoted professionals, doctors and scientists, were more likely to raise doubts about effectiveness. That's not necessarily a contradiction: it may simply be that professionals are the ones equipped to voice the genuine, ongoing scientific debate about overdiagnosis and the size of the benefit, while people who've been through screening are speaking to what it felt like, not to the statistics.
+        </p>
+
+        <br />
+
+        <body>
+            <img src="{% static 'app/content/news_media/Tab2.jpg' %}" style='max-width:750px; width: auto; height: auto;' />
+        </body>
+        
+        <br />
+        <br />
+        
+        <ss>Table 2. Frequencies of news frames for sources with personal or professional Involvement (N=675).</ss>
+
+        <br />
+        <br />
+
+        <h3>New methods are discussed more positive</h3>
+        <p>
+            One more pattern stood out. When articles discussed innovations,
+            things like curved paddles for mammograms or newer imaging techniques,
+            arguments in favor outnumbered arguments against by a wide margin.
+            When articles discussed the screening methods already in use today, the pap smear, the mammogram, the stool test,
+            pros and cons showed up in roughly equal numbers. New screening technology, in other words,
+            tends to get a more positive write-up than the tools we are actually using right now.
+            That's worth knowing if you're trying to understand what shapes public trust in the programs that already exist:
+            it may not be direct criticism so much as a steady stream of "here's something better" stories running alongside them.
+        </p>
+        <h3>Our read on all of this</h3>
+        <p>
+            Put together, we think this adds up to something close to a consistent narrative running
+            through thirteen years of Dutch newspaper coverage: screening is worth doing,
+            but doing it isn't pleasant. News reports consistently frame the trade-off the same way,
+            the practical friction and discomfort of screening are real and get reported honestly,
+            but they're outweighed by the benefit of catching cancer early.
+            We think of this as newspapers portraying cancer screening as a "necessary evil":
+            inconvenient, sometimes uncomfortable, occasionally anxiety-inducing, but ultimately worth the trouble.
+        </p>
+
+
+        {% endblock %}
