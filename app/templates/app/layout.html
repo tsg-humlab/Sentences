@@ -29,11 +29,10 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="{% url 'home' %}">Home</a></li>
-                    <li><a href="{% url 'project1a' %}">NewsMedia1</a></li>
-                    <li><a href="{% url 'project1b' %}">& 2</a></li>
-                    <li><a href="{% url 'project2' %}">SocialMedia</a></li>
+                    <li><a href="{% url 'project4' %}">NewsMedia</a></li>
                     <li><a href="{% url 'project3' %}">OnlineForum</a></li>
-                    <li><a href="{% url 'project4' %}">NewsMedia[new]</a></li>
+                    <li><a href="{% url 'project2' %}">SocialMedia</a></li>
+                    <li><a href="{% url 'project1' %}">Agent Based Modelling</a></li>
                     <li><a href="{% url 'about' %}">About</a></li>
                     <!-- <li><a href="{% url 'contact' %}">Researchersandcontact</a></li> -->
                 </ul>
@@ -46,7 +45,8 @@
             {% block content %}{% endblock %}
             <hr />
             <footer>
-                <p>&copy; {{ year }} - v0.1 Application developed by Humanities Lab</p>
+                <p>&copy; {{ year }} - v0.1 Application developed by Humanities Lab, Faculty of Arts, Radboud University. For technical support: <a href="mailto:thijs.hermsen@ru.nl">Thijs Hermsen</a></p>
+                
             </footer>
         </div>
 

@@ -38,7 +38,7 @@ def about(request):
         request,
         'app/about.html',
         {
-            'title':'About',
+            'title':'This project was conducted by',
             'message':'Your application description page.',
             'year':datetime.now().year,
         }
@@ -79,24 +79,24 @@ def project1b(request):
     )
 
 
-#def project1(request):
-#    """Renders the about page."""
-#    assert isinstance(request, HttpRequest)
-#    return render(
-#         request,
-#         'app/project1.html',
-#         {
-#             'title':'Nieuws data',
-#             'message':'Your application description page.',
-#             'year':datetime.now().year,
-#             'intro':'Introduction',
-#             'graphs':'Graphs',
-#             'context':'Context',
-#             'pdf':'Link to PDF article',        
+def project1(request):
+    """Renders the about page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+         request,
+         'app/project1.html',
+         {
+             'title':'Agent Based Modelling',
+             'message':'Your application description page.',
+             'year':datetime.now().year,
+             'intro':'Introduction',
+             'graphs':'Graphs',
+             'context':'Context',
+             'pdf':'Link to PDF article',      
 
 
-#         }
-#     )
+         }
+     )
 
 def project2(request):
     """Renders the about page."""
@@ -115,42 +115,6 @@ def project2(request):
 
         }
     )
-
-
-# def project3(request):
-#     """Renders the about page."""
-#     assert isinstance(request, HttpRequest)
-#     return render(
-#         request,
-#         'app/project3.html',
-#         {
-#             'title':'Viva forum',
-#             'message':'Your application description page.',
-#             'year':datetime.now().year,
-#             'intro':'Introduction',
-#             'graphs':'Graphs',
-#             'context':'Context',
-#             'pdf':'Link to PDF article',        
-
-#         }
-#     )
-
-# def project4(request):
-#     """Renders the about page."""
-#     assert isinstance(request, HttpRequest)
-#     return render(
-#         request,
-#         'app/project4.html',
-#         {
-#             'title':'Agent based modelling',
-#             'message':'Your application description page.',
-#             'year':datetime.now().year,
-#             'intro':'Introduction',
-#             'graphs':'Graphs',
-#             'context':'Context',
-#             'pdf':'Link to PDF article',   
-#         }
-#     )
 
 def project3(request):
     """Renders the about page."""

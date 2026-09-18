@@ -13,29 +13,19 @@
         choices whether or not to take part in cancer screening programs.
     </p>
 
-    <p>
-        As the participation rates in populational cancer screening programs are declining,
-        this project aimed to understand the role of media discussions in people’s decision
-        to take part in screening programs gives you a powerful, patterns-based way to build dynamic websites that
-        enables a clean separation of concerns and gives you full control over markup
-        for enjoyable, agile development.
-    </p>
-
-    <p><a href ="{% url 'about' %}" class="btn btn-primary btn-large">Find out more about the project &raquo;</a></p>
-
 
 </div>
 
 <div class="row">
-    
+
     <div class="col-md-3">
         <h2>News Media</h2>
         <p>
             This study investigated how news media discussed cancer screening.
             We analyzed 5,503 news articles from 2010 to 2022.
         </p>
-        <p><a class="btn btn-primary btn-large" href="{% url 'project1a' %}">Go to the 1st study &raquo;</a></p>
-        <p><a class="btn btn-primary btn-large" href="{% url 'project1b' %}">Go to the 2nd study &raquo;</a></p>
+        <p><a class="btn btn-primary btn-large" href="{% url 'project4' %}">Go to the study &raquo;</a></p>
+        
     </div>
     <div class="col-md-3">
         <h2>Online Forum</h2>
@@ -43,7 +33,7 @@
             This study investigated how cancer screening is discussed on an online forum.
             We analyzed one of the largest Dutch forums from 2010 to 2024.</a>
         </p>
-        <p><a class="btn btn-primary btn-large" href="{% url 'project2' %}">Go to the study &raquo;</a></p>
+        <p><a class="btn btn-primary btn-large" href="{% url 'project3' %}">Go to the study &raquo;</a></p>
     </div>
     <div class="col-md-3">
         <h2>Social Media</h2>
@@ -51,17 +41,39 @@
             This study investigated how people on social media discuss cancer screening.
             We analyzed discussions on X/Twitter from 2010 to 2023.
         </p>
-        <p><a class="btn btn-primary btn-large" href="{% url 'project3' %}">Go to the study &raquo;</a></p>
+        <p><a class="btn btn-primary btn-large" href="{% url 'project2' %}">Go to the study &raquo;</a></p>
     </div>
     <div class="col-md-3">
         <h2>Agent-Based Modeling</h2>
         <p>
-            By using Agent-based modeling on thedataset of messages on X, 
+            By using Agent-based modeling on thedataset of messages on X,
             we were able to model the sentiment about cancer screening discussions.
         </p>
-        <p><a class="btn btn-primary btn-large" href="{% url 'project4' %}">Go to the study &raquo;</a></p>
+        <p><a class="btn btn-primary btn-large" href="{% url 'project1' %}">Go to the study &raquo;</a></p>
     </div>
 </div>
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>Media</h2>
+
+        <p>
+            Interview with Martin-Pieter Jansen for Radboud Recharge in <a href="https://www.ru.nl/onderzoek/onderzoeksnieuws/waarom-online-het-sentiment-over-bevolkingsonderzoeken-anders-is-dan-gedacht">Dutch</a>
+            or <a href="https://www.ru.nl/en/research/research-news/why-online-sentiment-around-cancer-screening-programmes-is-different-than-expected">English</a>
+        </p>
+        <br />
+
+        <body>
+        <img src="{% static 'app/content/media/media_1.jpg' %}" style='max-width: 325px; width: auto; height: auto;'
+             title="woman with phone" />
+        </body>
+                
+
+        <br />
+    </div>
+</div>
+
+
 
 <div class="row">
     <div class="col-md-3">
@@ -70,7 +82,9 @@
             <img src="/static/app/content/RU_logo_NL.png" style='max-width: 450px; width: auto; height: auto;' title="Radboud Universiteit" />
         </a>
 
+        <
+
     </div>
 </div>
 
-{% endblock %}
+        {% endblock %}
