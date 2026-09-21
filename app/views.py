@@ -140,7 +140,7 @@ def project4(request):
         request,
         'app/project4.html',
         {
-            'title':'Cancer screening in the Dutch news: a "necessary evil" that!s worth it',
+            'title':'Cancer screening in the Dutch news: a "necessary evil" thats worth it',
             'message':'',
             'year':datetime.now().year,
             'intro':'Introduction',

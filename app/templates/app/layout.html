@@ -27,8 +27,7 @@
                 <a href="/" class="navbar-brand">Sentences</a>
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="{% url 'home' %}">Home</a></li>
+                <ul class="nav navbar-nav">                    
                     <li><a href="{% url 'project4' %}">NewsMedia</a></li>
                     <li><a href="{% url 'project3' %}">OnlineForum</a></li>
                     <li><a href="{% url 'project2' %}">SocialMedia</a></li>
@@ -36,24 +35,50 @@
                     <li><a href="{% url 'about' %}">About</a></li>
                     <!-- <li><a href="{% url 'contact' %}">Researchersandcontact</a></li> -->
                 </ul>
+                   
+
                 <!-- Image {% include 'app/loginpartial.html' %} -->
-                </div>
             </div>
         </div>
+    </div>
 
-        <div class="container body-content">
-            {% block content %}{% endblock %}
-            <hr />
-            <footer>
-                <p>&copy; {{ year }} - v0.1 Application developed by Humanities Lab, Faculty of Arts, Radboud University. For technical support: <a href="mailto:thijs.hermsen@ru.nl">Thijs Hermsen</a></p>
-                
-            </footer>
-        </div>
+    <div class="container body-content">
+        {% block content %}{% endblock %}
+        <hr />
+        
+    </div>
 
-        <script src="{% static 'app/scripts/jquery-1.10.2.js' %}"></script>
-        <script src="{% static 'app/scripts/bootstrap.js' %}"></script>
-        <script src="{% static 'app/scripts/respond.js' %}"></script>
-        {% block scripts %}{% endblock %}
+    <script src="{% static 'app/scripts/jquery-1.10.2.js' %}"></script>
+    <script src="{% static 'app/scripts/bootstrap.js' %}"></script>
+    <script src="{% static 'app/scripts/respond.js' %}"></script>
+    {% block scripts %}{% endblock %}
 
-    </body>
+
+    <div class=" footer">        
+            <div class="row">
+                    <div class="col-md-3">
+                    </div>
+
+                    <div class="col-md-3">
+                        <p>   </p>
+                        <p>   </p>
+                        <p>
+                            &copy; {{ year }} - v0.1 Application developed by Humanities Lab, Faculty of Arts,
+                            Radboud University.For technical support: <a href="mailto:thijs.hermsen@ru.nl">Thijs Hermsen</a>
+                        </p>
+                    </div>
+
+                    <div class="col-md-3">
+                        <p>
+                            <img src="{% static 'app/content/RU_logo_NL_wit.png' %}" style='margin-top: 4px; max-height: 60px; width: auto; height: auto;'
+                                 title="RU logo" />
+                        </p>
+                    </div>
+
+                </div>
+    </div>
+    {% block endcontent %}{% endblock %}
+
+
+</body>
     </html>
