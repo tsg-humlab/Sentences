@@ -328,7 +328,7 @@ body {
     background-color: #e3000b;
     color: white;
     text-align: center;
-    font-size:10px;
+    font-size:12px;
 }
 
 input,
@@ -2031,7 +2031,7 @@ textarea.input-lg {
   display: inline-block;
   padding: 6px 12px;
   margin-bottom: 0;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: bold;
   line-height: 1.428571429;
   text-align: center;
