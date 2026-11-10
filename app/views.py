@@ -13,7 +13,7 @@ def home(request):
         request,
         'app/index.html',
         {
-            'title':'Home Page',
+            'title':'Sentences-project',
             'year':datetime.now().year,
         }
     )
@@ -38,7 +38,7 @@ def about(request):
         request,
         'app/about.html',
         {
-            'title':'This project was conducted by',
+            'title':'Project Team',
             'message':'Your application description page.',
             'year':datetime.now().year,
         }
@@ -140,7 +140,7 @@ def project4(request):
         request,
         'app/project4.html',
         {
-            'title':'Cancer screening in the Dutch news: a "necessary evil" thats worth it',
+            'title':'Cancer screening in the Dutch news: a "necessary evil" that is worth it',
             'message':'',
             'year':datetime.now().year,
             'intro':'Introduction',
